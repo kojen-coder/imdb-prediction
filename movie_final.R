@@ -745,7 +745,9 @@ summary(reg23)
 movie_test=read.csv("/Users/apple/Desktop/test_data_IMDB_Fall_2023.csv")
 movie_final_test=movie_test 
 
-
+#To ensure that our model functions optimally, it's essential that our test dataset aligns with our training dataset. 
+#For instance, if our training data categorized countries into specific names like "USA" and "UK", 
+#it's essential that our test data uses the same categories(USA,UK) instead of United States and  United Kingdom.
 ##############
 #Country
 #############
@@ -763,6 +765,7 @@ table(movie_final_test$country)
 #Change to a dummy variable for later use 
 movie_final_test$country = as.factor(movie_final_test$country)
 
+## whatever category used in training set will be used in test set
 ##############
 #Distributor
 #############
